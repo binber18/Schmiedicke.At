@@ -9,17 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+       .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
-builder.Services.AddControllersWithViews(options =>
-{
-    var policy = new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-    options.Filters.Add(new AuthorizeFilter(policy));
-});
+builder.Services.AddControllersWithViews(
+                                         options =>
+                                         {
+                                             var policy = new AuthorizationPolicyBuilder()
+                                                         .RequireAuthenticatedUser()
+                                                         .Build();
+                                             options.Filters.Add(new AuthorizeFilter(policy));
+                                         });
 builder.Services.AddRazorPages()
-    .AddMicrosoftIdentityUI();
+       .AddMicrosoftIdentityUI();
 
 var app = builder.Build();
 
@@ -39,8 +40,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+                       name: "default",
+                       pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
