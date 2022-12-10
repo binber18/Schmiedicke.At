@@ -1,0 +1,48 @@
+{
+  "id": "did:web:schmiedicke.at",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:schmiedicke.at"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://schmiedicke.at/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/63f36b3e-da54-4ba7-8622-a7267cae797e"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#77403925067241f982c93e3620161d4evcSigningKey-f7770",
+      "controller": "did:web:schmiedicke.at",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "wQ229fkNbJFAV4T64qJOGFLYglgi1qCwNwzqgVgfLms",
+        "y": "iHqrzvOVdm0V4z7THAdmu8MMIpsPpatAubUFEUc7e_M"
+      }
+    }
+  ],
+  "authentication": [
+    "#77403925067241f982c93e3620161d4evcSigningKey-f7770"
+  ],
+  "assertionMethod": [
+    "#77403925067241f982c93e3620161d4evcSigningKey-f7770"
+  ]
+}

@@ -14,4 +14,13 @@
         <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="wwwroot\.well-known\did.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\.well-known\did-configuration.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
