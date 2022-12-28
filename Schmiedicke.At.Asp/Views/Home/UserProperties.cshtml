@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = $"User Data - {User.Identity?.Name}";
+}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Issuer</th>
+            <th>Value Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td class="text-wrap">@claim.Value</td>
+                <td>@claim.Issuer</td>
+                <td>@claim.ValueType</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

@@ -3,23 +3,28 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using Schmiedicke.At.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+builder.Services
+       .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
        .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
 builder.Services.AddControllersWithViews(
-                                         options =>
-                                         {
-                                             var policy = new AuthorizationPolicyBuilder()
-                                                         .RequireAuthenticatedUser()
-                                                         .Build();
-                                             options.Filters.Add(new AuthorizeFilter(policy));
-                                         });
-builder.Services.AddRazorPages()
+    static options =>
+    {
+        var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+        options.Filters.Add(new AuthorizeFilter(policy));
+    });
+builder.Services
+       .AddRazorPages()
        .AddMicrosoftIdentityUI();
+
+builder.Services.AddScoped<ILinksService, LinksService>();
 
 var app = builder.Build();
 
@@ -39,8 +44,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-                       name: "default",
-                       pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Links}/{id?}");
 app.MapRazorPages();
 
 app.Run();

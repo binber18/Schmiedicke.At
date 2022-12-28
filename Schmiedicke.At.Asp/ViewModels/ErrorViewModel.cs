@@ -1,4 +1,4 @@
-namespace Schmiedicke.At.Asp.Models;
+namespace Schmiedicke.At.Asp.ViewModels;
 
 public class ErrorViewModel
 {

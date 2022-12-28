@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Schmiedicke.At.Models.LinkListItem>
+@{
+    ViewData["Title"] = "Links";
+}
+
+<div class="row">
+    @foreach (var link in Model)
+    {
+        <a href="@link.Url"
+           target="_blank"
+           class="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-2 card text-black text-decoration-none border-0">
+            <img src="@link.Image" class="card-img-top m-auto" alt="@link.Text" style="max-width: 150px; height: 150px;">
+            <div class="card-body text-center">
+                <h5 class="card-title">@link.Text</h5>
+            </div>
+        </a>
+    }
+</div>

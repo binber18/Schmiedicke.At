@@ -1,15 +1,17 @@
-﻿<ul class="navbar-nav">
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Schmiedicke.At.Models
+<ul class="navbar-nav">
     @if (User.Identity?.IsAuthenticated == true)
     {
-        <span class="navbar-text text-dark">Hello @User.Identity?.Name!</span>
+        <a class="navbar-text text-dark text-decoration-none" asp-controller="Home" asp-action="UserProperties">Hallo @User.Claims.GetRealName()</a>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Sign out</a>
+            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Ausloggen</a>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Sign in</a>
+            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Einloggen</a>
         </li>
     }
 </ul>
