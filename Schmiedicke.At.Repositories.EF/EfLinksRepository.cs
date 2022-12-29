@@ -12,9 +12,9 @@ public class EfLinksRepository : ILinksRepositories
         _context = context;
     }
 
-    public async Task<IEnumerable<LinkListItem>> GetAllForUserAsync(string username)
+    public async Task<IEnumerable<Link>> GetAllForUserAsync(string username)
     {
-        return await _context.LinkListItems
+        return await _context.Links
                              .Where(x => x.Username == username || x.Username == null)
                              .ToListAsync();
     }

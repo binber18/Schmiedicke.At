@@ -5,5 +5,5 @@ namespace Schmiedicke.At.Repositories.EF;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<LinkListItem> LinkListItems => Set<LinkListItem>();
+    public DbSet<Link> Links => Set<Link>();
 }

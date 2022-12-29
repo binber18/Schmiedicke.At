@@ -4,5 +4,5 @@ namespace Schmiedicke.At.Services;
 
 public interface ILinksService
 {
-    Task<IEnumerable<LinkListItem>> GetAllForUser(string username);
+    Task<IEnumerable<Link>> GetAllForUser(string username);
 }

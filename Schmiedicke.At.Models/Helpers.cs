@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
@@ -5,6 +6,7 @@ namespace Schmiedicke.At.Models;
 
 public static class Helpers
 {
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T>? enumerable) => enumerable ?? Enumerable.Empty<T>();
 
     public static string GetRealName(this IEnumerable<Claim> claims)
@@ -18,6 +20,8 @@ public static class Helpers
         return name;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [StackTraceHidden]
     public static T NotNull<T>(this T? value, [CallerArgumentExpression(nameof(value))] string? argumentName = null)
         => value ?? throw new ArgumentNullException(argumentName);
 }
