@@ -3,4 +3,4 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
-/Schmiedicke.At.Asp/appsettings.Development.json
+Schmiedicke.At.Asp/appsettings.Development.json

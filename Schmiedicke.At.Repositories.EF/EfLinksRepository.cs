@@ -15,7 +15,7 @@ public class EfLinksRepository : ILinksRepositories
     public async Task<IEnumerable<Link>> GetAllForUserAsync(string username)
     {
         return await _context.Links
-                             .Where(x => x.Username == username || x.Username == null)
+                             .Where(x => x.Users.Contains(username))
                              .ToListAsync();
     }
 }
