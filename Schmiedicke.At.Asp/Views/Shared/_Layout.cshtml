@@ -8,7 +8,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - @name</title>
+    <title>
+        @{
+            var title = ViewData["Title"] as string;
+            var displayTitle = string.IsNullOrWhiteSpace(title) ? name : $"{title} - {name}";
+        }
+        @displayTitle
+    </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Schmiedicke.At.Asp.styles.css" asp-append-version="true"/>
@@ -18,7 +24,7 @@
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-navy text-winter  box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand text-winter" asp-area="" asp-controller="Home" asp-action="Links">
-                <img src="img/LS Logo Invertiert-Transparent.svg" alt="Schmiedicke" class="text-winter" height="50px" width="50pxs"/>
+                <img src="/img/LS Logo Invertiert-Transparent.svg" alt="Schmiedicke" class="text-winter" height="50px" width="50pxs"/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
