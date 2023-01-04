@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 591 591" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(2.25,0,0,2.25,-874.016,-103.346)">
+        <g id="Logo">
+            <g transform="matrix(0.679995,0,0,0.902524,150.302,7.72544)">
+                <path d="M543.213,56.873L693.636,122.307L693.636,253.173L543.213,318.607L392.791,253.173L392.791,122.307L543.213,56.873Z" style="fill:none;stroke:white;stroke-width:6.95px;"/>
+            </g>
+            <g transform="matrix(2.18164,0,0,2.19401,-331.498,-173.804)">
+                <g transform="matrix(50,0,0,50,414.962,176.276)">
+                </g>
+                <text x="362.813px" y="176.276px" style="font-family:'Skia-Regular', 'Skia', sans-serif;font-size:50px;fill:white;">LS</text>
+            </g>
+        </g>
+    </g>
+</svg>

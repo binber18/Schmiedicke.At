@@ -3,15 +3,15 @@
 <ul class="navbar-nav">
     @if (User.Identity?.IsAuthenticated == true)
     {
-        <a class="navbar-text text-dark text-decoration-none" asp-controller="Home" asp-action="UserProperties">Hallo @User.Claims.GetRealName()</a>
+        <a class="navbar-text text-winter text-decoration-none" asp-controller="Home" asp-action="UserProperties">Hallo @User.Claims.GetRealName()</a>
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Ausloggen</a>
+            <a class="nav-link text-winter" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Ausloggen</a>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Einloggen</a>
+            <a class="nav-link text-winter" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Einloggen</a>
         </li>
     }
 </ul>

@@ -6,13 +6,15 @@
 <div class="row">
     @foreach (var link in Model)
     {
-        <a href="@link.Url"
-           target="_blank"
-           class="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-2 card text-black text-decoration-none border-0">
-            <img src="@link.Image" class="card-img-top m-auto" alt="@link.Text" style="max-width: 150px; height: 150px;">
-            <div class="card-body text-center">
-                <h5 class="card-title">@link.Text</h5>
-            </div>
-        </a>
+        <div class="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-2 p-1">
+            <a href="@link.Url"
+               target="_blank"
+               class="card text-navy text-decoration-none bg-winter p-2">
+                <img src="@link.Image" class="card-img-top m-auto" alt="@link.Text" style="max-width: 100px; height: 100px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">@link.Text</h5>
+                </div>
+            </a>
+        </div>
     }
 </div>

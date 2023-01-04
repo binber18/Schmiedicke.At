@@ -15,9 +15,11 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-navy text-winter  box-shadow mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Links">@name</a>
+            <a class="navbar-brand text-winter" asp-area="" asp-controller="Home" asp-action="Links">
+                <img src="img/LS Logo Invertiert-Transparent.svg" alt="Schmiedicke" class="text-winter" height="50px" width="50pxs"/>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +27,7 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Links">Links</a>
+                        <a class="nav-link text-winter" asp-area="" asp-controller="Home" asp-action="Links">Links</a>
                     </li>
                 </ul>
                 <partial name="_LoginPartial"/>
@@ -40,7 +42,7 @@
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
+<footer class="border-top footer bg-navy text-beige">
     <div class="container">
         &copy; @DateTime.Now.Year - @name
     </div>
