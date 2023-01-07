@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
     <title>
         @{
             var title = ViewData["Title"] as string;
@@ -21,14 +22,14 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-navy text-winter  box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-primary text-winter box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand text-winter" asp-area="" asp-controller="Home" asp-action="Links">
                 <img src="/img/LS Logo Invertiert-Transparent.svg" alt="Schmiedicke" class="text-winter" height="50px" width="50pxs"/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon color-winter"></span>
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
@@ -48,7 +49,7 @@
     </main>
 </div>
 
-<footer class="border-top footer bg-navy text-beige">
+<footer class="border-top footer bg-navy text-winter">
     <div class="container">
         &copy; @DateTime.Now.Year - @name
     </div>
@@ -56,6 +57,7 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<!--suppress JSUnresolvedLibraryURL -->
 <script src="https://kit.fontawesome.com/2d741954fb.js" crossorigin="anonymous"></script>
 @await RenderSectionAsync("Scripts", required: false)
 </body>

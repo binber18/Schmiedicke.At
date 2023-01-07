@@ -3,6 +3,25 @@
     --blue: #607EAA;
     --beige: #EAE3D2;
     --winter: #F9F5EB;
+    --red: #DB5461;
+    
+    --navy-rgb: 28, 56, 121;
+    --blue-rgb: 96, 126, 170;
+    --beige-rgb: 234, 227, 210;
+    --winter-rgb: 249, 245, 235;
+    --red-rgb: 219, 84, 97;
+
+    --bs-danger: var(--red) !important;
+    --bs-primary: var(--navy) !important;
+    --bs-secondary: var(--blue) !important;
+
+    --bs-danger-rgb: var(--red-rgb) !important;
+    --bs-primary-rgb: var(--navy-rgb) !important;
+    --bs-secondary-rgb: var(--blue-rgb) !important;
+}
+
+.border-primary {
+    border-color: var(--navy) !important;
 }
 
 .bg-navy {

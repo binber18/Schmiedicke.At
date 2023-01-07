@@ -3,13 +3,13 @@
     ViewData["Title"] = "Links";
 }
 
-<div class="row">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-4">
     @foreach (var link in Model)
     {
-        <div class="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-2 p-1">
+        <div class="col">
             <a href="@link.Url"
                target="_blank"
-               class="card text-navy text-decoration-none bg-winter p-2">
+               class="card text-navy text-decoration-none p-2 border-primary">
                 <img src="@link.Image" class="card-img-top m-auto" alt="@link.Text" style="max-width: 100px; height: 100px;">
                 <div class="card-body text-center">
                     <h5 class="card-title">@link.Text</h5>
